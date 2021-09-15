@@ -16,10 +16,10 @@ public class Math_test{
             int c = scanner.nextInt();
 
             if (a*b == c) {
-                System.out.println("Правильно");
+                System.out.println("\u001b[32mПравильно");
                 r++;
             }else{
-                System.out.println("Неправильно");
+                System.out.println("\u001b[31mНеправильно");
             }
         }
         System.out.println("Вы ответили правильно на " + r + " из 5 примеров");
