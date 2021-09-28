@@ -7,21 +7,23 @@ public class Math_test{
     public static void main(String[] args) {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
-        int r = 0;
+        int rightAnswers = 0;
 
         for (int i = 0; i < 5; i++) {    
-            int a = random.nextInt(10);
-            int b = random.nextInt(10);
-            System.out.print(a + "*" + b + "=");
-            int c = scanner.nextInt();
+            int firstint = random.nextInt(10);
+            int secint = random.nextInt(10);
+            System.out.print(firstint + "*" + secint + "=");
+            int result = scanner.nextInt();
 
-            if (a*b == c) {
+            if (firstint*secint == result) {
                 System.out.println("\u001b[32mПравильно");
-                r++;
+                rightAnswers++;
             }else{
                 System.out.println("\u001b[31mНеправильно");
             }
         }
-        System.out.println("Вы ответили правильно на " + r + " из 5 примеров");
+        
+        System.out.println("Вы ответили правильно на " + rightAnswers + " из 5 примеров");
+        System.out.println("Ваша оценка - " + rightAnswers);
     }
 }
